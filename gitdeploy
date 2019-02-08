@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ $1 == ""]; then
-    rama=$(git branch | grep \* | cut -d ' ' -f2)
-fi
+rama=$(git branch | grep \* | cut -d ' ' -f2)
 read -p 'Mensaje para el commit: ' mensaje
 git add .
 git commit -m "$mensaje"
