@@ -1,6 +1,9 @@
 #!/bin/bash
 
+if [ $1 == ""]; then
+    rama="master"
+fi
 read -p 'Mensaje para el commit: ' mensaje
 git add .
 git commit -m "$mensaje"
-git push origin master
+git push origin $rama
